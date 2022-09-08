@@ -171,10 +171,10 @@ function slider() {
       .eq(currentQuizActive)
       .addClass("brief_breadcrumbs_item--active");
    
-      $(".progress_bar").css({ width: `${currentQuiz * 60 - 4}` });
+      $(".progress_bar").css({ width: `${(currentSlide + 1) * 60 - 4}` });
     
 
-    $(".quiz_step span").text(currentQuiz);
+    $(".quiz_step span").text(currentSlide+1);
     $(".quiz_content").eq(currentSlide).attr("data-pass", "true");
     setTimeout(function () {
       $(".quiz_content").eq(currentSlide).fadeIn();
@@ -196,6 +196,8 @@ function slider() {
     $(".brief_breadcrumbs_item")
       .eq(currentQuizActive)
       .addClass("brief_breadcrumbs_item--active");
+    $(".progress_bar").css({ width: `${(currentSlide +1) * 60 - 4}` })
+    $(".quiz_step span").text(currentSlide+1)
     setTimeout(function () {
       $(".quiz_content").eq(currentSlide).fadeIn();
     }, 400);
