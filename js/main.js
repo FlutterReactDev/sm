@@ -29,11 +29,57 @@ $(document).ready(function () {
     $(".anyclass").width(150); // ширина
     $(".anyclass").height(300); // высота
   });
+  $(".keys_list").slick({
+    variableWidth: true,
+    arrows: false,
+    adaptiveHeight: true,
+  });
+  $(".nav-mobi").slick({
+    variableWidth: true,
+    infinite: false,
+    touchMove: false,
+    adaptiveHeight: true,
+    prevArrow:
+      "<button type='button' class='slick-prev pull-left'><img src='img/slider-arrow-left.svg' alt=''/></button>",
+    nextArrow:
+      "<button type='button' class='slick-next pull-right'><img src='img/slider-arrow-right.svg' alt=''/></button>",
+  });
+  $(".nav-link ").click(function () {
+    $(".nav-link ").removeClass("active");
+  });
+
   incTab();
   cardsAnimation();
   slider();
+  animateBg();
+  techSlider();
 });
+function animateBg() {
+  $(document).mousemove(function (n) {
+    if (window.innerWidth < 768) return;
+    if ($(".modal").hasClass("modal--active")) return;
+    animateMainBg(n.pageX / window.innerWidth, n.pageY / window.innerHeight);
+  });
 
+  function animateMainBg(n, a) {
+    var coordinate1 = 0;
+    var coordinate2 = 0;
+    (coordinate1 = 10 * (n -= 1)),
+      (coordinate2 = 10 * (a -= 1)),
+      $(".main_img_1").css(
+        "transform",
+        `translate3d(${coordinate1 * 5}px, ${coordinate2 * 5}px, 0)`
+      );
+    $(".main_img_2").css(
+      "transform",
+      `translate3d(${coordinate1 * 2}px, ${coordinate2 * 2}px, 0)`
+    );
+    $(".technologies_content").css(
+      "transform",
+      `translate3d(${coordinate1 * 2}px, ${coordinate2 * 2}px, 0)`
+    );
+  }
+}
 function incTab() {
   $(".ind_list_item").click(function (e) {
     var data = "";
@@ -59,30 +105,51 @@ function incTab() {
   $(".ind-text-tab").first().fadeIn();
 }
 function cardsAnimation() {
+  resetCard();
   $(".card").click(function (e) {
     if ($(e.target).attr("data-card")) {
-      $(".about_card").first().addClass("about-card--move");
-      setTimeout(() => {
-        $(".about_card").first().removeClass("about-card--move");
-        $(".about_card").first().remove();
+      var cardID = $(e.target).attr("data-card");
+      $(`.about_card[data-card="${cardID}"]`).remove();
+      $(".about_cards").prepend(createCard(cardID));
 
-        $(".about_cards").prepend(createCard($(e.target).attr("data-card")));
+      resetCard();
 
-        $(".about_card").first().addClass("about_card-animate");
-      }, 350);
+      // $(`.about_card[data-card="${cardID}"]`).animate({
+      //   top: '150px',
+      //   left:'350px'
+      // },100);
+
+      // setTimeout(function () {
+      //   resetCard()
+      //   $(`.about_card[data-card="${cardID}"]`).animate({'top': '-19px','left':'26px'});
+      // },400)
     }
   });
+  function resetCard() {
+    var maxIndex = 5;
+    $(".about_card").each(function (item) {
+      $(".about_card")
+        .eq(item)
+        .css({
+          top: `-${(item + 1) * 19}px`,
+          left: `${(item + 1) * 26}px`,
+          zIndex: `${maxIndex}`,
+        });
+      maxIndex--;
+    });
+  }
+
   function createCard(img) {
-    return `<div class="about_card">
-              <img src="img/card${img}.svg" alt=""/>
-            </div>`;
+    return `<div class="about_card" data-card="${img}">
+    <img src="img/card${img}.png" alt=""/>
+  </div>`;
   }
 }
 function slider() {
   var currentSlide = 0;
   var currentQuiz = 1;
   var currentQuizActive = 0;
-  
+
   var activeElemets = {};
   var data = {
     projectType: "",
@@ -129,13 +196,11 @@ function slider() {
     $(".brief_breadcrumbs_item .brief_breadcrumbs_item_name")
       .eq(dataQuiz)
       .text(data[dataProp]);
-     
   });
   $(".brief_quiz_btn-next").click(function () {
-    if(activeElemets[currentSlide]) {
+    if (activeElemets[currentSlide]) {
       nextSlider();
     }
-    
   });
   $(".brief_quiz_btn-prev").click(function () {
     prevSlider();
@@ -148,7 +213,7 @@ function slider() {
   function nextSlider() {
     $(".quiz_content").eq(currentSlide).fadeOut();
     $(".brief_breadcrumbs_item").removeClass("brief_breadcrumbs_item--active");
-    itemPick = ''
+    itemPick = "";
     currentSlide++;
     currentQuizActive++;
     if (currentQuizActive > 4) {
@@ -170,11 +235,10 @@ function slider() {
     $(".brief_breadcrumbs_item")
       .eq(currentQuizActive)
       .addClass("brief_breadcrumbs_item--active");
-   
-      $(".progress_bar").css({ width: `${(currentSlide + 1) * 60 - 4}` });
-    
 
-    $(".quiz_step span").text(currentSlide+1);
+    $(".progress_bar").css({ width: `${(currentSlide + 1) * 60 - 4}` });
+
+    $(".quiz_step span").text(currentSlide + 1);
     $(".quiz_content").eq(currentSlide).attr("data-pass", "true");
     setTimeout(function () {
       $(".quiz_content").eq(currentSlide).fadeIn();
@@ -196,8 +260,8 @@ function slider() {
     $(".brief_breadcrumbs_item")
       .eq(currentQuizActive)
       .addClass("brief_breadcrumbs_item--active");
-    $(".progress_bar").css({ width: `${(currentSlide +1) * 60 - 4}` })
-    $(".quiz_step span").text(currentSlide+1)
+    $(".progress_bar").css({ width: `${(currentSlide + 1) * 60 - 4}` });
+    $(".quiz_step span").text(currentSlide + 1);
     setTimeout(function () {
       $(".quiz_content").eq(currentSlide).fadeIn();
     }, 400);
@@ -209,4 +273,26 @@ function slider() {
       );
     }
   }
+}
+function techSlider() {
+  $(".technology_list_item a").click(function (e) {
+    e.preventDefault();
+    var dataContent = $(e.target).attr("data-content");
+
+    $(".technologies_modal").css({
+      display: "block",
+    });
+
+    $(`.technologies_tags[data-content="${dataContent}"]`).css({
+      display: "flex",
+    });
+    $(".tag_close_btn").click(function () {
+      $(".technologies_modal").css({
+        display: "none",
+      });
+      $(".technologies_tags").css({ display: "none" });
+    });
+  });
+
+  $(".technologies_tags").css({ display: "none" });
 }

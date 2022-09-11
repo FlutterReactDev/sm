@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title></title>
 
     <!-- CSS -->
-  
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/media.css" rel="stylesheet">
-    <link href="css/jquery.fullPage.css" type="text/css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/jquery.fullPage.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,47 +21,63 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-   
-  
+
   <body>
+    <section class="section-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="navbar_wrap">
+                <a class="navbar-brand" href="#"
+                  ><img src="img/logo.svg" alt="">
+                    </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"
+                    ><img src="img/burger.svg" alt=""
+                  /></span>
+                </button>
+              </div>
+              <a href="#" class="link link_bref link_bref2">заполнить бриф</a>
 
-  <section class="section-nav">
-
-  
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="navbar_wrap">
-              <a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><img src="img/burger.svg" alt=""></span>
-              </button>
-            </div>
-            <a href="#" class="link link_bref link_bref2">заполнить бриф</a>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="nav_wrap d-flex justify-content-end align-items-center w-100">
-                <ul id="navigation" class="navbar-nav">
-                  <li data-menuanchor="main"><a href="#main">Главная</a></li>
-                  <li data-menuanchor="solution"><a href="#solution">Решения</a></li>
-                  <li data-menuanchor="industries"><a href="#industries">Отрасли</a></li>
-                  <li data-menuanchor="keys"><a href="#keys">Кейсы</a></li>
-                  <li data-menuanchor="about"><a href="#about">Принципы</a></li>
-                  <li data-menuanchor="technology"><a href="#technology">Технологии</a></li>
-                 
-                </ul>
-                <a href="#brief" class="link link_bref">заполнить бриф</a>
-              </div>  
-            </div>
-            
-          </nav>
-        </div>  
-      </div>  
-    </div>
-  </section>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div
+                  class="nav_wrap d-flex justify-content-end align-items-center w-100"
+                >
+                  <ul id="navigation" class="navbar-nav">
+                    <li data-menuanchor="main"><a href="#main">Главная</a></li>
+                    <li data-menuanchor="solution">
+                      <a href="#solution">Решения</a>
+                    </li>
+                    <li data-menuanchor="industries">
+                      <a href="#industries">Отрасли</a>
+                    </li>
+                    <li data-menuanchor="keys"><a href="#keys">Кейсы</a></li>
+                    <li data-menuanchor="about">
+                      <a href="#about">Принципы</a>
+                    </li>
+                    <li data-menuanchor="technology">
+                      <a href="#technology">Технологии</a>
+                    </li>
+                  </ul>
+                  <a href="#brief" class="link link_bref">заполнить бриф</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
     <div id="fullpage">
-      <section class="section section_main" data-anchor="main">
+        <section class="section section_main" data-anchor="main">
         <div class="container container-lg">
           <div class="row_main row pb-5 mb-4">
             <div class="col-md-6">
@@ -79,7 +96,10 @@
               </div> 
             </div>
             <div class="col-md-6">
-              <div class="main_img"><img src="img/main-img.svg" alt=""></div>
+              <div class="main_img">
+                <img class="main_img_hero main_img_1" src="img/main-img.svg" alt="">
+                <img class="main_img_hero  main_img_2" src="img/main-img2.svg" alt="">
+              </div>
               <div class="btn_top_wrap2">
                 <button class="btn btn_top">Начать работу с нами</button>
                 <div class="btn_top_bg"></div>
@@ -197,7 +217,7 @@
                   <div class="col-md-12 col-lg-6 scroll-col">
                  
 
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul  class="nav nav-tabs" id="myTab" role="tablist">
                       <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
                           
@@ -260,6 +280,68 @@
 
                       
                     </ul>
+                    <ul class="nav nav-tabs nav-mobi" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                          
+                          Электронная коммерция <br>
+                          <span>
+                          •	B2C/B2B электронные 
+                          торговые площадки<br>
+                          •	Лендинги с высокой 
+                          конверсией трафика <br>
+                          •	Базы данных<br>
+                          •	Повышение конверсии 
+                          продаж <br>
+                          •	Расширение воронки 
+                          продаж и геотаргетинга
+                          </span>
+
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                          Бизнес-приложения <br>
+
+                          <span>
+                            •	Порталы взаимодействия 
+                            с партнерами<br>
+                            •	Рекомендательные решения <br>
+                            •	WEB-интерфейсы <br>
+                            •	Внедрение геймификации HR
+                          </span>
+
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                          
+                          Клиентские сервисы
+
+                          <span>
+                            •	Личный кабинет <br>
+                            •	Информационные порталы <br>
+                            •	CRM-программы
+                          </span>
+
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">
+                          
+                          Клиентские сервисы
+
+                          <span>
+                            •	Личный кабинет <br>
+                            •	Информационные порталы <br>
+                            •	CRM-программы
+                          </span>
+
+                        </a>
+                      </li>
+
+                    </ul>
                   </div>
                   <div class="col-md-12 col-lg-6">
                     <div class="tab-content" id="myTabContent">
@@ -285,183 +367,163 @@
           </div>
         </div>
       </section>
-      <!-- <section class="section section_ind" data-anchor="industries">
+      <section class="section section_ind" data-anchor="industries">
         <div class="container">
-          
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-5">
+             
               <div class="ind_title">Отрасли</div>
-                <ul class="nav nav-tabs ind_list"  role="tablist">
-                  <li class="ind_list_item tab-icon ind_list_item--active" data-tab="shield">
-                    <img src="img/shield.svg" alt=""/>
-                    <span class="tab-icon ">Страхование</span>
-                  </li>
-                  <div class="list_item_wrap">
-                    <li class="ind_list_item tab-icon" data-tab="dollar-sign" >
-                      <img src="img/dollar-sign.svg" alt=""/>
-                      <span class="tab-icon ">Банки</span>
-                    </li>
-                    <li class="ind_list_item tab-icon " data-tab="shopping-cart">
-                      <img src="img/shopping-cart.svg" alt=""/>
-                      <span class="tab-icon ">FMSG</span>
-                    </li>
-                  </div>
-                  <li class="ind_list_item tab-icon " data-tab="shopping-bag">
-                    <img src="img/shopping-bag.svg" alt=""/>
-                    <span class="tab-icon ">Розничная торговля</span>
-                  </li>
-                  <div class="list_item_wrap">
-                    <li class="ind_list_item tab-icon " data-tab="activity"> 
-                      <img src="img/activity.svg" alt=""/>
-                      <span class="tab-icon ">Фарма</span>
-                    </li>
-                    <li class="ind_list_item tab-icon " data-tab="smartphone">
-                      <img src="img/smartphone.svg" alt=""/>
-                      <span class="tab-icon ">Телеком</span>
-                    </li>
-                  </div>
-                  <div class="list_item_wrap">
-                    <li class="ind_list_item tab-icon " data-tab="briefcase"> 
-                      <img src="img/briefcase.svg" alt=""/>
-                      <span class="tab-icon ">Стартапы</span></li>
-                    <li class="ind_list_item tab-icon " data-tab="video"> 
-                      <img src="img/video.svg" alt=""/>
-                      <span class="tab-icon ">Сми</span>
-                    </li>
-                  </div>
-                </ul>
-            </div>  
-            <div class="col-md-4">
+              <ul class="ind_list" role="tablist">
+                <li
+                  class="ind_list_item tab-icon ind_list_item--active"
+                  data-tab="shield"
+                >
+                  <img src="img/shield.svg" alt="" />
+                  <span class="tab-icon">Страхование</span>
+                </li>
+
+                <li class="ind_list_item tab-icon" data-tab="dollar-sign">
+                  <img src="img/dollar-sign.svg" alt="" />
+                  <span class="tab-icon">Банки</span>
+                </li>
+                <li class="ind_list_item tab-icon" data-tab="shopping-cart">
+                  <img src="img/shopping-cart.svg" alt="" />
+                  <span class="tab-icon">FMSG</span>
+                </li>
+
+                <li class="ind_list_item tab-icon" data-tab="shopping-bag">
+                  <img src="img/shopping-bag.svg" alt="" />
+                  <span class="tab-icon">Розничная торговля</span>
+                </li>
+
+                <li class="ind_list_item tab-icon" data-tab="activity">
+                  <img src="img/activity.svg" alt="" />
+                  <span class="tab-icon">Фарма</span>
+                </li>
+                <li class="ind_list_item tab-icon" data-tab="smartphone">
+                  <img src="img/smartphone.svg" alt="" />
+                  <span class="tab-icon">Телеком</span>
+                </li>
+
+                <li class="ind_list_item tab-icon" data-tab="briefcase">
+                  <img src="img/briefcase.svg" alt="" />
+                  <span class="tab-icon">Стартапы</span>
+                </li>
+                <li class="ind_list_item tab-icon" data-tab="video">
+                  <img src="img/video.svg" alt="" />
+                  <span class="tab-icon">Сми</span>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="col-lg-2">
               <div class="ind_icons">
                 <div class="ind_line"></div>
                 <div class="ind_icon">
                   <div class="inc_icon_tab" data-content="shield">
-                    <img src="img/big-shield.svg" alt=""/>
+                    <img src="img/big-shield.svg" alt="" />
                   </div>
-                  <div class="inc_icon_tab"data-content="dollar-sign">
-                    <img src="img/big-dollar-sign.svg" alt=""/>
+                  <div class="inc_icon_tab" data-content="dollar-sign">
+                    <img src="img/big-dollar-sign.svg" alt="" />
                   </div>
-                  <div class="inc_icon_tab"  data-content="shopping-cart">
-                    <img src="img/big-shopping-cart.svg" alt=""/>
+                  <div class="inc_icon_tab" data-content="shopping-cart">
+                    <img src="img/big-shopping-cart.svg" alt="" />
                   </div>
-                  <div class="inc_icon_tab"  data-content="shopping-bag">
-                    <img src="img/big-shopping-bag.svg" alt=""/>
+                  <div class="inc_icon_tab" data-content="shopping-bag">
+                    <img src="img/big-shopping-bag.svg" alt="" />
                   </div>
                   <div class="inc_icon_tab" data-content="activity">
-                    <img src="img/big-activity.svg" alt=""/>
+                    <img src="img/big-activity.svg" alt="" />
                   </div>
                   <div class="inc_icon_tab" data-content="smartphone">
-                    <img src="img/big-smartphone.svg" alt=""/>
+                    <img src="img/big-smartphone.svg" alt="" />
                   </div>
                   <div class="inc_icon_tab" data-content="briefcase">
-                    <img src="img/big-briefcase.svg" alt=""/>
+                    <img src="img/big-briefcase.svg" alt="" />
                   </div>
                   <div class="inc_icon_tab" data-content="video">
-                    <img src="img/big-video.svg" alt=""/>
+                    <img src="img/big-video.svg" alt="" />
                   </div>
                 </div>
                 <div class="ind_line"></div>
               </div>
-            </div>  
-            <div class="col-md-4">
+            </div>
+            <div class="col-lg-5">
               <div class="ind_text">
                 <div class="ind-text-tab" data-content="shield">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж Программы лояльности
                     Соответствие законодательным требованиям
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="dollar-sign">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
                     Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="shopping-cart">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
                     Соответствие законодательным требованиям
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="shopping-bag">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
                     Соответствие законодательным требованиям
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="activity">
-                  <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    
-                  </p>
+                  <p>Интернет-продажи Расчеты страховых продуктов</p>
                 </div>
                 <div class="ind-text-tab" data-content="smartphone">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
-                    Соответствие законодательным требованиям
-                    Системы дополнительных и перекрестных продаж
-                    Программы лояльности
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж Программы лояльности
+                    Соответствие законодательным требованиям Системы
+                    дополнительных и перекрестных продаж Программы лояльности
                     Соответствие законодательным требованиям
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="briefcase">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов
                   </p>
                 </div>
                 <div class="ind-text-tab" data-content="video">
                   <p>
-                    Интернет-продажи
-                    Расчеты страховых продуктов
-                    Системы самообслуживания для B2B- и B2C-клиентов
-                    Системы дополнительных и перекрестных продаж
+                    Интернет-продажи Расчеты страховых продуктов Системы
+                    самообслуживания для B2B- и B2C-клиентов Системы
+                    дополнительных и перекрестных продаж
                   </p>
                 </div>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
-      </section> -->
-      
+      </section>
+
       <section class="section section_keys" data-anchor="keys">
         <div class="container">
           <div class="row">
@@ -476,8 +538,64 @@
                 на высоком уровне.
 
               </div>
-              <button class="btn btn_top btn_key">Смотреть кейсы</button>
+              
             </div> 
+            <div class="col-md-6">
+              <div class="keys_list">
+                <div class="keys_list_item">
+                  <div class="keys_list_wrap">
+                    <div>
+                      <div class="keys_list_item_title">
+                        ЛИЧНЫЙ КАБИНЕТ
+                      </div>
+                      <div class="keys_list_item_text">
+                        Разработка личного кабинета для инвесторов в сфере финансовых рынков
+                      </div>
+                    </div>
+                 
+                    <div><button class="keys_list_item_btn">Смотреть <img style="display: inline-block;" src="img/akar-icons_arrow-up-right.svg" alt=""/></button></div>
+                      
+                    
+                    
+                  </div>
+                  
+                </div>
+                <div class="keys_list_item"> <div class="keys_list_wrap">
+                  <div>
+                    <div class="keys_list_item_title">
+                      ЛИЧНЫЙ КАБИНЕТ
+                    </div>
+                    <div class="keys_list_item_text">
+                      Разработка личного кабинета для инвесторов в сфере финансовых рынков
+                    </div>
+                  </div>
+               
+                  <div><a class="keys_list_item_btn">Смотреть <img style="display: inline-block;" src="img/akar-icons_arrow-up-right.svg" alt=""/></a></div>
+                    
+                  
+                  
+                </div></div>
+                <div class="keys_list_item"> <div class="keys_list_wrap">
+                  <div>
+                    <div class="keys_list_item_title">
+                      ЛИЧНЫЙ КАБИНЕТ
+                    </div>
+                    <div class="keys_list_item_text">
+                      Разработка личного кабинета для инвесторов в сфере финансовых рынков
+                    </div>
+                  </div>
+               
+                  <div><button class="keys_list_item_btn">Смотреть <img style="display: inline-block;" src="img/akar-icons_arrow-up-right.svg" alt=""/></button></div>
+                    
+                  
+                  
+                </div></div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn_top btn_key">Смотреть кейсы</button>
+            </div>
           </div>    
       </section>  
       
@@ -611,58 +729,129 @@
             <div class="col-md-6">
               <div class="about_wrap">
                 <div class="about_cards">
-                  <div class="about_card">
-                    <img src="img/card1.svg" alt=""/>
+                  <div class="about_card" data-card="1">
+                    <img src="img/card1.png" alt=""/>
                   </div>
-                  <div class="about_card">
-                    <img src="img/dummy-card.svg" alt=""/>
+                  <div class="about_card" data-card="2">
+                    <img src="img/card2.png" alt=""/>
                   </div>
-                  <div class="about_card">
-                    <img src="img/dummy-card.svg" alt=""/>
+                  <div class="about_card" data-card="3">
+                    <img src="img/card3.png" alt=""/>
                   </div>
-                  <div class="about_card">
-                    <img src="img/dummy-card.svg" alt=""/>
+                  <div class="about_card" data-card="4">
+                    <img src="img/card4.png" alt=""/>
                   </div>
-                  <div class="about_card">
-                    <img src="img/dummy-card.svg" alt=""/>
+                  <div class="about_card" data-card="5">
+                    <img src="img/card5.png" alt=""/>
                   </div>
                 </div>
               </div>
               
             </div>
           </div>    
-      </section>   
+      </section>    
       <section class="section section_technology" data-anchor="technology"> 
         <div class="container">
           <div class="row">
             <div class="col-md-12">
                 <div class="technology_title">Технологии</div>
-                <ul class="technology_list">
-                 <li class="technology_list_item">РАЗРАБОТКА КЛИЕНТСКИХ СИСТЕМ
-                </li>
-                 <li class="technology_list_item ">МОБИЛЬНАЯ РАЗРАБОТКА
-                </li>
-                 <li class="technology_list_item ">ИНТЕГРАЦИЯ</li>
-                 <li class="technology_list_item">РАЗРАБОТКА СЕРВЕРНЫХ СИСТЕМ
-                </li>
-                 <li class="technology_list_item ">РАЗРАБОТКА БАЗ ДАННЫХ
-                </li>
-                 <li class="technology_list_item ">УПРАВЛЕНИЕ КОДОМ
-                </li>
-                 <li class="technology_list_item">УПРАВЛЕНИЕ ПРОЕКТАМИ
-                </li>
-                 <li class="technology_list_item ">КОРПОРАТИВНЫЙ ПОИСК
-                </li>
-                 <li class="technology_list_item">ВЕБ-АНАЛИТИКА
-                </li>
-                 <li class="technology_list_item">ПРОЕКТИРОВАНИЕ
-                </li>
-                </ul>
+                <div class="technologies_modal">
+                  <div class="technologies_content">
+                  
+                    <div class="technologies_tags" data-content="backend">
+                      <div class="technologies_tag">Python</div>
+                      <div class="technologies_tag">PHP</div>
+                      <div class="technologies_tag">Symfony</div>
+                      <div class="technologies_tag">1С-Битрикс</div>
+                      <div class="technologies_tag">Java</div>
+                      <div class="technologies_tag">Microsoft .NET</div>
+                      <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                    </div>
+                    <div class="technologies_tags" data-content="frontend">
+                      <div class="technologies_tag">Swift</div>
+                      <div class="technologies_tag">Kotlin</div>
+                      <div class="technologies_tag">Coroutines</div>
+                      <div class="technologies_tag">Combine</div>
+                      <div class="technologies_tag">SwiftUI</div>
+                      <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                    </div>
+                    <div class="technologies_tags" data-content="mobile">
+                      <div class="technologies_tag">Swift</div>
+                      <div class="technologies_tag">Kotlin</div>
+                      <div class="technologies_tag">Coroutines</div>
+                      <div class="technologies_tag">Combine</div>
+                      <div class="technologies_tag">SwiftUI</div>
+                      <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                    </div>
+                    <div class="technologies_tags" data-content="methodology">                     
+                        <div class="technologies_tag">Waterfall</div>
+                        <div class="technologies_tag">Agile</div>
+                        <div class="technologies_tag">Scrum</div>
+                        <div class="technologies_tag">Kanban</div>
+                        <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                    </div>
+                    <div class="technologies_tags" data-content="database">                                 
+                        <div class="technologies_tag">MySQL</div>
+                        <div class="technologies_tag">PostgreSQL</div>
+                        <div class="technologies_tag">MongoDB</div>
+                        <div class="technologies_tag">Redis</div>
+                        <div class="technologies_tag">Memcached</div>
+                        <div class="technologies_tag">Clickhouse</div>
+                        <div class="technologies_tag">Tarantool</div>
+                        <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                  </div>
+                  <div class="technologies_tags" data-content="search">
+                    <div class="technologies_tag">ElasticSearch</div>
+                    <div class="technologies_tag">Sphinx</div>
+                    <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                  </div>   
+                  <div class="technologies_tags" data-content="integration">
+                    <div class="technologies_tag">Microsoft Dynamics AX</div>
+                    <div class="technologies_tag">SAP</div>
+                    <div class="technologies_tag">Sugar CRM</div>
+                    <div class="technologies_tag">Microsoft Dynamics CRM</div>
+                    <div class="technologies_tag">Emarsys</div>
+                    <div class="technologies_tag">Manzana</div>
+                    <div class="technologies_tag">1С</div>
+                    <button class="tag_close_btn"><img src="img/tag-close.svg" alt=""></button>
+                  </div>
+                  
+                  </div>
+                  
+                </div>
+                <div id="myCanvasContainer" style="text-align: center;">
+                  <canvas width="800" height="600" id="myCanvas">
+                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                  </canvas>
+                </div>
+                <div id="tags">
+                  <ul>
+                    <li class="technology_list_item"><a data-content="frontend">РАЗРАБОТКА КЛИЕНТСКИХ СИСТЕМ</a>
+                    </li>
+                     <li class="technology_list_item"> <a data-content="mobile">МОБИЛЬНАЯ РАЗРАБОТКА</a>
+                    </li>
+                     <li class="technology_list_item"><a data-content="integration">ИНТЕГРАЦИЯ</a> </li>
+                     <li class="technology_list_item"><a data-content="backend"> РАЗРАБОТКА СЕРВЕРНЫХ СИСТЕМ</a>
+                    </li>
+                     <li class="technology_list_item "><a data-content="database"> РАЗРАБОТКА БАЗ ДАННЫХ</a>
+                    </li>
+                     <li class="technology_list_item "> <a>УПРАВЛЕНИЕ КОДОМ</a>  
+                    </li>
+                     <li class="technology_list_item"><a data-content="methodology"> УПРАВЛЕНИЕ ПРОЕКТАМИ</a>
+                    </li>
+                     <li class="technology_list_item "><a data-content="search">КОРПОРАТИВНЫЙ ПОИСК</a> 
+                    </li>
+                     <li class="technology_list_item"><a> ВЕБ-АНАЛИТИКА</a>
+                    </li>
+                     <li class="technology_list_item"><a>ПРОЕКТИРОВАНИЕ</a> 
+                    </li>
+                  </ul>
+                </div>
             </div> 
           </div>
         </div>
       </section> 
-      <section class="section section_brief" data-anchor="brief">
+     <section class="section section_brief" data-anchor="brief">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -843,8 +1032,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="section section_secret" data-anchor="secret">
+      </section> 
+       <section class="section section_secret" data-anchor="secret">
         <div class="secret_wrap">
           <div class="secret">
             <div class="secret_title">
@@ -854,33 +1043,37 @@
                <img src="img/secret-code.svg" alt="">
             </div>
           </div>
-           <footer class="footer">
+          <footer class="footer">
+            <div class="container">
               <ul class="footer_list">
-                <div class="footer_group"> 
-                     <li class="footer_list_item footer_list_item-1">2022</li> 
-                     <li class="footer_list_item footer_list_item-2">Политика
-                          конфиденциальности</li> 
-                    <li class="footer_list_item footer_list_item-3">Юридическая информация</li>
+                <div class="row">
+                  <div class="col-md-3">
+                    <li class="footer_list_item footer_list_item-first">2022</li>
+                  </div>
+                  <div class="col-md-3">
+                    <li class="footer_list_item">Политика конфиденциальности</li>
+                  </div>
+                  <div class="col-md-3">
+                    <li class="footer_list_item footer_list_item-3">
+                      Юридическая информация
+                    </li>
+                  </div>
+                  <div class="col-md-3">
+                    <li class="footer_list_item footer_list_item-last">mail@mail.com</li>
+                  </div>
                 </div>
-                      
-                   <li class="footer_list_item">mail@mail.com</li> 
               </ul>
+            </div>
           </footer>
         </div>
         
-      </section>
+      </section> 
     </div>
 
-
-
-   
-
-   
-
-
-   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/tagcanvas.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/jquery.easings.min.js"></script>
@@ -889,8 +1082,38 @@
     <script src="js/main.js"></script>
     <script>
       $(document).ready(function () {
-        $('#fullpage').fullpage();
-        menu: '#navigation'
+       
+        $('#fullpage').fullpage({
+          menu: '#navigation',
+
+          afterLoad: function(anchor, index){
+            if(index == 5 || index == 6) {
+              
+              $('.section-nav').addClass('navbar_white')
+              $('.navbar-brand img').remove()
+              $('.navbar-brand ').append(' <img src="img/logo-white.svg" alt=""/>')
+            }else {
+              $('.section-nav').removeClass('navbar_white')
+              $('.navbar-brand img').remove()
+              $('.navbar-brand ').append(' <img src="img/logo.svg" alt=""/>')
+            }
+          }
+    });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        if(!$('#myCanvas').tagcanvas({
+          textColour : '#333333',
+          clickToFront:800,
+     outlineThickness : 1,
+     textHeight:20,
+     maxSpeed : 0.03,
+     depth : 0.75
+        },'tags')) {
+          // something went wrong, hide the canvas container
+          $('#myCanvasContainer').hide();
+        }
       });
     </script>
   </body>
