@@ -62,6 +62,7 @@
   .main_block_wrap {
     margin: 0 0 30px 0;
   }
+
   .row_main2 {
     display: none;
   }
@@ -99,7 +100,9 @@
     align-items: center;
     padding: 0 0 0 10px;
   }
-
+  .tab-pane img{
+    max-height: 230px;
+  }
   .nav-tabs .nav-link span {
     font-size: 14px;
     line-height: 23px;
@@ -189,9 +192,6 @@
     font-size: 14px;
     margin: 0 0 10px 0;
   }
-  .section_keys {
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 830px) {
@@ -214,7 +214,28 @@
     font-size: 13px;
   }
   .keys_list_wrap {
-    height: 284px;
+    height: 195px;
+  }
+  .key_body {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    line-height: 18px;
+  }
+  .key_title {
+    margin: 0 0 10px 0;
+  }
+  .keys_list_item_title {
+    font-size: 18px;
+  }
+  .keys_list_item_text {
+    font-size: 16px;
+  }
+  .btn_key {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .section_keys {
+    margin: 0;
   }
   .main_title {
     font-size: 45.2609px;
@@ -247,14 +268,6 @@
 
   .nav-tabs .nav-link {
     height: 230px;
-  }
-
-  .tab-content > .tab-pane img {
-    height: 320px;
-  }
-  .btn_key {
-    margin: 0 auto;
-    margin-top: 50px;
   }
 
   .about_wrap {
@@ -291,18 +304,13 @@
     padding: 0 !important;
   }
   .main_img {
-    
     margin-top: 60px;
-}
+  }
 }
 
 /* Ipad mini*/
 @media screen and (max-width: 640px) {
   .row_main2 {
-    display: none;
-  }
-
-  .tab-content {
     display: none;
   }
 
@@ -316,9 +324,10 @@
 
   .btn_top {
     margin: 0 auto;
+    padding: 12px 0 10px 25px;
   }
   .btn_key {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .btn_top_wrap {
     display: none;
@@ -373,6 +382,24 @@
 @media screen and (max-width: 480px) {
   .main_block_wrap {
     margin: 0 0 20px 0;
+  }
+  .key_title {
+    margin: 0 0 5px 0;
+  }
+  .keys_list_wrap {
+    height: 140px;
+  }
+  .keys_list_item_text {
+    font-size: 14px;
+  }
+  .keys_list_item_title {
+    font-size: 16px;
+  }
+  .keys_list_item {
+    padding: 9px 15px;
+  }
+  .btn_top {
+    padding: 8px 0 6px 25px;
   }
   .technology_list_item {
     padding: 15px 15px;
@@ -487,7 +514,7 @@
   }
 
   .section_keys .fp-tableCell {
-    padding: 80px 0 0 0;
+    padding: 70px 0 0 0;
     background: #333333;
   }
 }
