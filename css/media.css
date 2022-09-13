@@ -4,12 +4,8 @@
     padding: 0 0 20px !important;
   }
 
-  .main_img {
-    height: 330px;
-  }
-
   .main_img img {
-    height: 330px;
+    max-height: 330px;
   }
 
   .btn_top_wrap {
@@ -100,7 +96,7 @@
     align-items: center;
     padding: 0 0 0 10px;
   }
-  .tab-pane img{
+  .tab-pane img {
     max-height: 230px;
   }
   .nav-tabs .nav-link span {
@@ -213,6 +209,33 @@
   .dev_top {
     font-size: 13px;
   }
+  .main_img_hero {
+    display: none;
+  }
+  .team_title {
+    font-size: 32px;
+  }
+  .team_title span {
+    font-size: 16px;
+  }
+  .team_block_wrap,.team_block_wrap2 {
+    padding: 10px 0 10px 0;
+  }
+  .team_img {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .team_img img {
+    max-height: 300px;
+  }
+  .about_title {
+    font-size: 32px;
+
+    padding: 10px 0 10px 0;
+  }
+  .main_img-mobi {
+    display: block;
+  }
   .keys_list_wrap {
     height: 195px;
   }
@@ -303,9 +326,6 @@
   .fp-tableCell {
     padding: 0 !important;
   }
-  .main_img {
-    margin-top: 60px;
-  }
 }
 
 /* Ipad mini*/
@@ -350,8 +370,8 @@
     font-size: 14px;
   }
 
-  .main_img {
-    margin: 37px 0 0 0;
+  .main_img img{
+    max-height: 270px;
   }
 
   .container {
@@ -482,10 +502,6 @@
 
   .main_block_wrap {
     padding: 22px 12px 12px 13px;
-  }
-
-  .icon_top {
-    display: none;
   }
 
   .main_block_title {

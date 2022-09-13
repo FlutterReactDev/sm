@@ -177,6 +177,9 @@ footer {
 .main_img {
   position: relative;
 }
+.main_img-mobi {
+  display: none;
+}
 .main_img_hero {
   position: absolute;
 }
